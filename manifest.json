@@ -1,0 +1,49 @@
+{
+  "manifest_version": "0.3",
+  "name": "pptx-mcp",
+  "display_name": "PPTX MCP",
+  "version": "0.1.0",
+  "description": "Free MCP server: read, outline and preview PowerPoint (.pptx) files from any AI agent.",
+  "author": {
+    "name": "207studio"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/207studio/pptx-mcp"
+  },
+  "keywords": [
+    "mcp",
+    "pptx",
+    "powerpoint",
+    "slides",
+    "model-context-protocol"
+  ],
+  "server": {
+    "type": "node",
+    "entry_point": "src/index.js",
+    "mcp_config": {
+      "command": "node",
+      "args": ["${__dirname}/src/index.js"]
+    }
+  },
+  "tools": [
+    {
+      "name": "pptx_outline",
+      "description": "Turns a .pptx into a slide-by-slide outline: title, body text and speaker notes, as JSON."
+    },
+    {
+      "name": "pptx_thumbnail",
+      "description": "Returns the cover thumbnail image that PowerPoint saved inside the .pptx, if there is one."
+    },
+    {
+      "name": "pptx_web_preview",
+      "description": "Writes a self-contained HTML page previewing the first 5 slides as text cards, ready to share."
+    }
+  ],
+  "compatibility": {
+    "runtimes": {
+      "node": ">=18"
+    }
+  }
+}
