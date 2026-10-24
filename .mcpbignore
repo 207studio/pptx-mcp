@@ -1,0 +1,12 @@
+/.git/
+/.github/
+/.agents/
+/.codex/
+/.cache/
+/.DS_Store
+/.gitignore
+/test/
+/scripts/
+/dist/
+/*.log
+/*.mcpb

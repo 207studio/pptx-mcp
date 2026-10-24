@@ -43,6 +43,15 @@ npm install
 npm test
 ```
 
+## MCPB bundle
+
+```sh
+npm ci
+npm run bundle
+```
+
+Upload `dist/pptx-mcp.mcpb` to Smithery as "Local (MCPB Bundle)". The bundle includes production dependencies.
+
 ## License
 
 MIT © 207studio
