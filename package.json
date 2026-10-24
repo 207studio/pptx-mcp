@@ -14,7 +14,9 @@
   ],
   "scripts": {
     "start": "node src/index.js",
-    "test": "node --test test/"
+    "test": "node --test",
+    "bundle:validate": "mcpb validate manifest.json",
+    "bundle": "npm run bundle:validate && node scripts/bundle.js"
   },
   "license": "MIT",
   "author": "207studio",
@@ -40,6 +42,7 @@
     "zod": "^4.6.7"
   },
   "devDependencies": {
+    "@anthropic-ai/mcpb": "^2.1.2",
     "pptxgenjs": "^4.0.1"
   }
 }
